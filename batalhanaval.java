@@ -58,18 +58,20 @@ public class BatalhaNaval extends javax.swing.JFrame {
 
         // Inicializando os botões da matriz do jogador
         for (int i = 0; i < 25; i++) {
+            final int index = i; // Captura do índice dentro do loop
             botoesJogador[i] = new javax.swing.JToggleButton();
             botoesJogador[i].setBackground(Color.CYAN);
-            botoesJogador[i].addActionListener(e -> colocarBarcoJogador(i));
+            botoesJogador[i].addActionListener(e -> colocarBarcoJogador(index));
             painelJogador.add(botoesJogador[i]);
         }
 
         // Inicializando os botões da matriz do computador
         for (int i = 0; i < 25; i++) {
+            final int index = i; // Captura do índice dentro do loop
             botoesComputador[i] = new javax.swing.JToggleButton();
             botoesComputador[i].setBackground(Color.GRAY);
             botoesComputador[i].setEnabled(false);
-            botoesComputador[i].addActionListener(e -> atacarComputador(i));
+            botoesComputador[i].addActionListener(e -> atacarComputador(index));
             painelComputador.add(botoesComputador[i]);
         }
 
